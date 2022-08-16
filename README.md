@@ -12,21 +12,25 @@ yarn build
 
 ## 调试
 
-为方便开发和调试，这里引入了一个小型的React项目。这个项目基于vite脚手架创建，存放在`example`文件夹下。开发者可以在根目录执行：
+为方便开发和调试，这里引入了一个小型的React项目。这个项目基于vite脚手架创建，存放在`example`文件夹下。我们可以在这个使用官方React的项目里，一点一点替换自己实现的功能。
+
+npm提供‘链接“的功能帮助开发者更好的调试尚未发布的npm包。我们可以借助这个特性，在example项目中调试我们的react。
+
+首先，在仓库的根目录执行：
 
 ```shell
 yarn link
 ```
 
-然后进入`example`目录，执行：
+然后进入`example`项目目录，执行：
 
 ```shell
 yarn link my-react-mono
 ```
 
-此后，在example项目内，任何需要引入react的地方，均可替换为my-react-mono. 启动example项目后，任何在`packages`下的改动，都会出发example项目的热更新。
+这样就链接上了my-react-mono包。此后，在example项目内，任何需要引入react的地方，均可替换为my-react-mono中的实现. 启动example项目后，任何在`packages`下的改动，都会触发example项目的热更新。
 
-例如下面的方式可以替换`React.createElement`函数。需要注意的是，我们自己的react实现存放在`dist/react`文件夹下。这是因为为了方便，我们直接发布了整个monorepo，而不是想官方的react仓库一样，对react，react-dom，scheduler等项目单独发布npm包。
+例如下面的方式可以替换`React.createElement`函数。
 
 ```javascript
 // old
@@ -36,3 +40,4 @@ import React from 'react';
 import React from 'my-react-mono/dist/react'
 ```
 
+需要注意的是，我们自己的react实现存放在`dist/react`文件夹下。这是因为为了减轻工作量，我们直接发布了整个monorepo，而不是像官方的react仓库一样对react，react-dom，scheduler等项目单独发布npm包。
