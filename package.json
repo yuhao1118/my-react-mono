@@ -1,0 +1,26 @@
+{
+  "name": "my-react",
+  "version": "0.0.1",
+  "description": "Yuhao's implementation of React.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "yuhao1118",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "eslint": "^8.22.0",
+    "eslint-plugin-react": "^7.30.1",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
+    "rollup": "^2.78.0",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.7"
+  }
+}

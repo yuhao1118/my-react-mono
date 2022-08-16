@@ -1,0 +1,9 @@
+build
+dist
+node_modules
+.history
+.husky
+.vscode
+coverage
+vite.config.ts
+jest.config.ts
