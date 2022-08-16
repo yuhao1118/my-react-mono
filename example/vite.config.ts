@@ -12,7 +12,7 @@ export default defineConfig({
             {
               throwIfNamespace: false, // defaults to true
               runtime: 'automatic', // defaults to classic
-              importSource: '../../packages/react', // defaults to react
+              importSource: 'my-react-mono/dist/react', // defaults to react
             },
           ],
         ],

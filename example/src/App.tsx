@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+import React from 'my-react-mono/dist/react'
+
+React.createElement()
 
 function App() {
   const [count, setCount] = useState(0)

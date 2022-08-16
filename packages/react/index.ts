@@ -1,5 +1,1 @@
-import { createElement } from "./ReactElement";
-
-export {
-  createElement
-}
+export * from './ReactElement';

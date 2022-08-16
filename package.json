@@ -1,10 +1,11 @@
 {
-  "name": "my-react",
+  "name": "my-react-mono",
   "version": "0.0.1",
   "description": "Yuhao's implementation of React.js",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "build": "rm -rf ./dist && tsc"
   },
   "keywords": [
     "React"
